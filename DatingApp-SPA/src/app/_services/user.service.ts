@@ -25,4 +25,12 @@ updateUser(userId: number, user: User) {
   return this.http.put(this.baseUrl + 'users/' + userId, user);
 }
 
+setMainPhoto(userId: number, photoId: number) {
+  return this.http.post(this.baseUrl + 'users/' + userId + '/photos/' + photoId + '/setMain',{});
+}
+
+deletePhoto(userId: number, id: number) {
+  return this.http.delete(this.baseUrl + 'users/' + userId + '/photos/' + id);
+}
+
 }

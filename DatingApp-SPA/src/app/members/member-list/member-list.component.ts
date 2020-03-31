@@ -16,9 +16,19 @@ export class MemberListComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      this.users = data['users']
+      this.users = data['users'];
+      //this.shuffleArray(this.users);
     });
   }
+
+  // shuffleArray(array) {
+  //   for (let i = array.length-1; i >0; i--) {
+  //      let j = Math.floor(Math.random() * (i + 1));
+  //      let temp = array[i];
+  //       array[i] = array[j];
+  //       array[j] = temp;
+  //   }
+  // }
 
   // loadUsers(){
   //   this.userService.getUsers().subscribe((users: User[]) => {
